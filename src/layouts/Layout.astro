@@ -1,0 +1,102 @@
+---
+import Etcetera from "../components/Etcetera.astro"
+type Props = {
+	title: string
+	description?: string
+	frontmatter?: Props
+}
+
+const { title, description } = Astro.props.frontmatter ?? Astro.props
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>{title}</title>
+		<meta property="og:type" content="website" />
+		{
+			description && (
+				<>
+					<meta name="description" content={description} />
+					<meta name="og:description" content={description} />
+				</>
+			)
+		}
+		<meta name="og:site_name" content="Etcetera" />
+		<meta name="theme-color" content="#6acb5d" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="color-scheme" content="dark light" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+	</head>
+	<body>
+		<header>
+			<nav>
+				<ul>
+					{
+						Object.entries({
+							Etcetera: "/",
+							Manifesto: "/manifesto",
+							Tangent: "/tangent/",
+							Methodsave: "/methodsave",
+							Oxymoron: "/oxymoron",
+						}).map(([name, href]) => (
+							<li>
+								<a
+									{href}
+									aria-current={
+										Astro.url.pathname === href ? "page" : undefined
+									}
+								>
+									{name === "Etcetera" ? (
+										<>
+											<Etcetera />{" "}
+										</>
+									) : null}
+									{name}
+								</a>
+							</li>
+						))
+					}
+				</ul>
+			</nav>
+		</header>
+		<slot />
+		<footer>
+			Contains several beagles. <a
+				href="https://www.gnu.org/licenses/gpl-3.0"
+				rel="license">🄯 Etcetera Development, {new Date().getFullYear()}</a
+			>
+		</footer>
+	</body>
+</html>
+<style>
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+	li {
+		margin-inline: 8px;
+		display: inline-block;
+	}
+	[aria-current="page"] {
+		font-weight: bold;
+	}
+	footer {
+		text-align: center;
+	}
+</style>
+<style is:global>
+	:root {
+		font-family: system-ui, sans-serif;
+		max-width: 800px;
+		margin-inline: auto;
+		line-height: 1.5;
+		accent-color: #6acb5d;
+	}
+	code {
+		font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+			DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+	}
+</style>

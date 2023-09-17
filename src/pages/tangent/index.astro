@@ -1,0 +1,92 @@
+---
+import "./style.scss"
+import twitter from "./assets/anon.png?url"
+import Layout from "../../layouts/Layout.astro"
+import Etcetera from "../../components/Etcetera.astro"
+import { Image } from "astro:assets"
+import wave from "../../assets/wave.webp"
+---
+
+<Layout title="Tangent from Etcetera" description="Go on tangents. The browser built for research.">
+	<h1>Go on <i>tangents.</i></h1>
+	<!-- TODO: Screenshot -->
+	<a href="https://flathub.org/apps/uk.cetera.Tangent"
+		><img
+			width="240"
+			alt="Download on Flathub"
+			src="https://dl.flathub.org/assets/badges/flathub-badge-en.png"
+		/></a
+	>
+	<p>
+		What if you could make sense of your tabs? What if you could actually use your bookmarks? What if your browser actually supported Linux?
+	</p>
+
+	<p>
+		This is <dfn>Tangent</dfn>, a
+		<a href="https://webkitgtk.org">WebkitGTK</a> browser from
+		<a href="https://cetera.uk" rel="author"><Etcetera /> Etcetera</a>.
+	</p>
+
+	<h2>
+		Case study: split <img src={wave.src} alt=":wavesmiley:" height="20px"/>
+	</h2>
+	<p>
+		split has an average of <a
+			href="https://helloeverybodymynameismarkiplierandwelcometofivenightsatfreddys.anindiehorrorgamethatyouguyssuggestedenmasseandisawthatyamimash.playeditandhesaidthatitwasreallyreallygoodsoimveryeagertoseewha.tisupandthatisaterrifyinganimatronicbear.fnaf.stream/notes/9in8avs2k7"
+			>1200 tabs open</a
+		>. His browser <a href="https://coolviruses.download/notes/9ji4hc5im2imc0sy"
+			>uses 23 GiB of RAM</a
+		>. Approximately 0 bytes of that is organized. He has to scroll for minutes
+		to find what he needs.
+	</p>
+	<p>
+		With Tangent, split's tab journey can be summarized at a glance. With
+		Timeline, he doesn't need tabs open to find this information. Tangent's
+		sleeping tabs saves his computer from committing suicide.
+	</p>
+	<h2>Beyond bookmarks</h2>
+	<p>
+		Tangent has a new kind of bookmark we call Methodsave. Auto-archiving,
+		auto-tagging, and much more. Replace Twitter's (and Mastodon's, and
+		GitHub's, and...) bookmark button with a Methodsave button to keep
+		everything in one place. Import not just your old browser's bookmarks, but
+		also your social media's. Thanks GDPR and CCPA! Message bars throughout the
+		Internet gain a button (and a hotkey!) to easily send a Save. No more going
+		through 5 thumbnail-less screenshots until you find
+		<samp>Screenshot from 2023-08-15 03-57-24.png</samp>.
+	</p>
+
+	<h2>The <i>user agent.</i></h2>
+	<ul class="bento">
+		<li class="grid-area: anonymous">
+			<h3>Anonymous mode</h3>
+			<p>Blurs identifiying info across many websites.</p>
+			<img
+				src={twitter}
+				width="283px"
+				alt="Screenshot of the end of Twitter's navbar. The Tweet button is visible along with a heavily blurred and obfuscated profile switcher."
+			/>
+		</li>
+		<li style="grid-area: privacy">
+			<h3>We aren't snooping</h3>
+			<p>Tangent never connects to our servers.</p>
+		</li>
+
+		<li style="grid-area: download">
+			<h3>Download videos</h3>
+			<p>
+				No more
+				<a
+					href="https://www.gnu.org/philosophy/who-does-that-server-really-serve"
+					>sketchy websites</a
+				>.
+				<!-- todo: screenshot of download panel open in tangent, showing the prompt to download the video above the list of downloaded files -->
+			</p>
+		</li>
+	</ul>
+	<h2>A sidebar</h2>
+	<p>
+		Inspired by Tree Style Tab, Tangent features a method of displaying tabs
+		which is somehow new to most people.
+	</p>
+</Layout>

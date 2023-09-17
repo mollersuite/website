@@ -1,0 +1,210 @@
+---
+import Etcetera from "../components/Etcetera.astro"
+import Layout from "../layouts/Layout.astro"
+import anonymous from "../assets/Message To Josh Miller.mp4?url"
+import "./style.scss"
+import {
+	siJavascript,
+	siRust,
+	siLua,
+	siZig,
+	siNixos,
+	siCsharp,
+	siGo,
+	siPython,
+} from "simple-icons"
+
+const people = [
+	{
+		name: "Jack",
+		href: "https://jack.cab",
+		role: "founder, designer, and developer",
+		country: "🇺🇸",
+		langs: [siJavascript, siLua, siRust, siNixos],
+	},
+	{
+		name: "Charlie",
+		href: "https://github.com/trollar",
+		role: "founder and developer",
+		country: "🇬🇧",
+		langs: [siJavascript, siLua, siRust, siNixos, siZig, siCsharp],
+	},
+	{
+		name: "split",
+		href: "https://me.fyle.uk",
+		role: "designer and developer",
+		country: "🇺🇸",
+		langs: [siJavascript, siLua],
+	},
+	{
+		name: "Wavi",
+		href: "https://fur.dev",
+		role: "backend developer",
+		country: "🇬🇧",
+		langs: [siJavascript, siLua, siRust],
+	},
+	{
+		name: "nickk",
+		href: "https://github.com/nickk431",
+		role: "designer",
+		country: "🇺🇸",
+		langs: [siJavascript, siLua, siGo, siPython, siRust],
+	},
+	{
+		name: "Bongo",
+		href: "https://github.com/poopyhead121",
+		role: "backend developer",
+		country: "🇺🇸",
+		langs: [siJavascript, siPython, siLua],
+	},
+	{
+		name: "mau",
+		href: "https://github.com/maumaumaumaumaumau",
+		role: "backend developer",
+		country: "🇨🇱",
+		langs: [siJavascript, siLua],
+	},
+	{
+		name: "Auxnos",
+		href: "https://github.com/Auxnos",
+		role: "backend developer",
+		country: "🇺🇸",
+		langs: [siJavascript, siLua],
+	},
+]
+---
+
+<Layout
+	title="Etcetera"
+	description="We write software, usually out of spite. Not-for-profit, always free as in freedom."
+>
+	<p>
+		Seven cheat developers and one anti-cheat developer attempt to make <a
+			href="https://www.gnu.org/philosophy/free-sw"
+			title="What is free software?">free software</a
+		>. What could go wrong?
+	</p>
+
+	<ul class="bento">
+		<li>
+			<a href="" style="grid-area:methodsave">
+				<h3>Methodsave</h3>
+				<p>
+					<strong>Bookmarks from the future</strong>, integrated deeply with
+					your desktop and apps.
+					<Etcetera>
+						<path
+							d="m102.637 163.447c-3.01454 0-5.70018 1.91834-6.6594 4.79584l-10.1672 30.4467-32.2006-0.10962c-6.87859-0.0274-9.70127 8.82434-4.08327 12.7706l25.4316 17.9227-10.5234 30.0631c-2.2198 6.3305 4.82326 11.8663 10.4686 8.22144l28.0899-18.1968 27.3226 18.142c5.61799 3.72706 12.7432-1.80871 10.5234-8.13922l-10.5508-30.0905 25.5687-18.0872c5.53577-3.94629 2.76788-12.6884-4.02851-12.7158l-32.6939-0.10962-9.83832-30.0631c-0.93177-2.8775-3.61743-4.82324-6.65936-4.85064z"
+						></path>
+					</Etcetera>
+				</p>
+			</a>
+		</li>
+		<li>
+			<a href="" style="grid-area:oxymoron">
+				<h3>Oxymoron</h3>
+				<p>
+					An ActivityPub server <strong>for morons</strong>.<Etcetera>
+						<path
+							d="m 104.50843,171.04785 c -12.346794,0.51676 -23.641624,7.03159 -30.285634,17.459 -9.00633,14.1739 -7.58525,32.59258 3.48811,45.23467 11.07335,12.60517 29.159834,16.40702 44.385704,9.30162 2.36232,-1.08888 3.39583,-3.91259 2.28849,-6.2749 -1.10733,-2.36232 -3.91258,-3.37738 -6.2749,-2.28849 -11.42401,5.35211 -25.007334,2.50995 -33.312354,-6.97623 -8.32347,-9.46772 -9.3939,-23.30941 -2.60224,-33.92138 6.75475,-10.64888 19.747494,-15.52116 31.835914,-11.99614 12.10687,3.52502 20.43034,14.61683 20.43034,27.22201 -0.0185,0.0554 -0.0185,0.12919 0,0.18455 v 4.54008 c 0,1.69792 -0.90432,3.22973 -2.36232,4.07869 -1.47645,0.84896 -3.26664,0.84896 -4.72463,0 -1.47645,-0.8305 -2.38077,-2.39923 -2.36231,-4.07869 v -4.72463 c 0,-10.3905 -8.52649,-18.89853 -18.89853,-18.89853 -10.390504,0 -18.898534,8.50803 -18.898534,18.89853 0,10.37204 8.50803,18.89853 18.898534,18.89853 4.92764,0 9.3939,-1.97475 12.77126,-5.09375 1.05198,1.25499 2.30695,2.34387 3.76495,3.19282 4.37398,2.52841 9.78146,2.52841 14.17389,0 4.37399,-2.52841 7.0685,-7.21614 7.08695,-12.27297 v -4.72463 c -0.0185,-16.7946 -11.11026,-31.57753 -27.222,-36.30217 -3.96795,-1.14424 -8.0651,-1.64254 -12.18069,-1.45799 z m 1.60564,28.31089 c 5.25984,0 9.44926,4.17097 9.44926,9.44927 0,5.25984 -4.18942,9.44926 -9.44926,9.44926 -5.27831,0 -9.449274,-4.18942 -9.449274,-9.44926 0,-5.2783 4.170964,-9.44927 9.449274,-9.44927 z m 0,0"
+						></path>
+					</Etcetera>
+				</p>
+			</a>
+		</li>
+		<li>
+			<a href="./tangent/" style="grid-area:tangent">
+				<h3>Tangent</h3>
+				<p>
+					<strong>Go on tangents.</strong> The browser built for research.
+					<Etcetera>
+						<path
+							d="m 106.11375,171.00703 c -20.80597,0 -37.79325,16.98728 -37.79325,37.79325 0,20.80597 16.98728,37.79325 37.79325,37.79325 20.80597,0 37.79325,-16.98728 37.79325,-37.79325 0,-20.80597 -16.98728,-37.79325 -37.79325,-37.79325 z m 9.29084,11.65292 c 4.80289,1.69283 8.9759,4.6651 12.12534,8.50348 h -6.18077 c -1.53535,-3.0707 -3.52343,-5.94457 -5.94457,-8.50348 z m -18.73915,0.0591 c -2.38176,2.55891 -4.36985,5.39341 -5.9052,8.44442 h -6.06267 c 3.11008,-3.799 7.24371,-6.73192 11.96787,-8.44442 z m 6.92876,0.4921 v 7.95232 h -7.04687 c 1.83062,-2.99196 4.17301,-5.68867 7.04687,-7.95232 z m 5.0391,0.0787 c 2.81481,2.24397 5.13752,4.92099 6.94844,7.87359 h -6.94844 z m -27.22295,12.91269 h 7.26339 c -1.08261,3.24786 -1.75188,6.65319 -1.96839,10.0782 h -8.18854 c 0.31494,-3.60217 1.3385,-7.0075 2.89354,-10.0782 z m 12.63712,0 h 9.54673 v 10.0782 H 91.78381 c 0.23621,-3.44469 0.9842,-6.85003 2.26366,-10.0782 z m 14.58583,0 h 9.44832 c 1.27945,3.22817 2.02744,6.63351 2.26365,10.0782 H 108.6333 Z m 14.82204,0 h 7.36181 c 1.55504,3.0707 2.5786,6.47603 2.89355,10.0782 h -8.28696 c -0.21653,-3.42501 -0.88578,-6.83034 -1.9684,-10.0782 z m -44.93853,15.1173 h 8.18854 c 0.2362,3.42502 0.88578,6.83035 1.98808,10.0782 h -7.28308 c -1.55504,-3.0707 -2.5786,-6.47603 -2.89354,-10.0782 z m 13.267,0 h 11.81039 v 10.0782 h -9.52705 c -1.27946,-3.20849 -2.02745,-6.6335 -2.28334,-10.0782 z m 16.84949,0 h 11.71197 c -0.25589,3.4447 -1.00388,6.86971 -2.28334,10.0782 h -9.42863 z m 16.79044,0 h 8.28696 c -0.31495,3.60217 -1.33851,7.0075 -2.89355,10.0782 h -7.38149 c 1.1023,-3.24785 1.75187,-6.65318 1.98808,-10.0782 z m -40.72617,15.1173 h 6.10204 c 1.57472,3.0707 3.58249,5.94457 6.0233,8.50348 -4.80289,-1.69283 -8.97589,-4.6651 -12.12534,-8.50348 z m 11.90882,0 h 6.98781 v 7.81454 c -2.83449,-2.22429 -5.17689,-4.88162 -6.98781,-7.81454 z m 12.02691,0 h 6.8894 c -1.79125,2.91323 -4.09427,5.5312 -6.8894,7.73581 z m 12.69617,0 h 6.20046 c -3.18881,3.87775 -7.42087,6.86971 -12.28281,8.54285 2.48018,-2.55892 4.50763,-5.45247 6.08235,-8.54285 z m 0,0"
+						></path>
+					</Etcetera>
+				</p>
+			</a>
+		</li>
+
+		<li>
+			<a href="" style="grid-area:masstable">
+				<h3>Masstable</h3>
+				<p>Nushell meets GTK. A terminal beyond ASCII art.</p>
+			</a>
+		</li>
+		<li>
+			<a href="" style="grid-area:method">
+				<h3>Method Desktop</h3>
+				<p>
+					<strong>Multiplayer-first</strong> desktop environment.
+				</p>
+			</a>
+		</li>
+		<li>
+			<video style="grid-area:more" src={anonymous} controls width="300"
+			></video>
+		</li>
+	</ul>
+	<h2 id="people">People</h2>
+	<ul class="root">
+		{
+			people.map(({ name, href, role, country, langs }) => (
+				<li>
+					<span class="flex">
+						<span>
+							<a {href}>{name}</a>
+							{role}
+						</span>
+						<ul>
+							<li style="font-size:24px">{country}</li>
+							{langs
+								.sort((a, b) => a.title.localeCompare(b.title))
+								.map((icon) => (
+									<li>
+										<Fragment set:html={icon.svg} />
+									</li>
+								))}
+						</ul>
+					</span>
+				</li>
+			))
+		}
+	</ul>
+</Layout>
+
+<style lang="scss">
+	h1 {
+		text-align: center;
+	}
+	body {
+		font-family: sans-serif;
+	}
+	h2 {
+		transition: border-left 0.3s, padding-left 0.3s, text-decoration-color 0.3s;
+		text-decoration: underline;
+		text-decoration-color: transparent;
+	}
+	h2:target {
+		border-left: solid 5px Highlight;
+		padding-left: 5px;
+		text-decoration-color: currentColor;
+	}
+	.root > li > span {
+		display: flex;
+		flex-wrap: wrap;
+		> span {
+			flex-grow: 1;
+			color: GrayText;
+		}
+		> ul {
+			list-style: none;
+			> li {
+				display: inline;
+			}
+		}
+	}
+	li :global(svg) {
+		height: 24px;
+		fill: currentColor;
+	}
+</style>
