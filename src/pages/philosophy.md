@@ -6,7 +6,7 @@ description: Quotes and links that describe how we think
 
 # Philosophy
 
-> Nine former Roblox exploiters try to destroy million dollar companies
+> Eight former Roblox exploiters try to destroy million dollar companies
 
 ―[Jack](https://jack.cab), founder of Etcetera, explaining Etcetera
 
