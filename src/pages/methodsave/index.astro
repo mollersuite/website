@@ -6,8 +6,12 @@ import Layout from "../../layouts/Layout.astro"
 	title="Methodsave from Etcetera"
 	description="Bookmarks from the future."
 >
-	<meta name="og:title" content="Methodsave" slot="head" />
-	<h1>Save faster than a methodsecond.</h1>
+	<mark>Warning: Methodsave doesn't exist yet.</mark>
+	<Fragment slot="head">
+		<meta name="robots" content="noindex" />
+		<meta name="og:title" content="Methodsave" />
+	</Fragment>
+	<h1>Bookmarks unleashed.</h1>
 	<p>
 		Download Methodsave on <a
 			href="https://flathub.org/apps/uk.cetera.Methodsave"
@@ -32,16 +36,12 @@ import Layout from "../../layouts/Layout.astro"
 			> F-Droid</a
 		>.
 	</p>
-
-	<p>Methodsave is the first bookmark manager with a methodillion downloads.</p>
-	<h2>The new standard for Linux</h2>
+	<h2>Built to last.</h2>
 	<p>
-		Enjoy full integration with the GNOME desktop: Take a screenshot, and
-		Methodsave will save everything inside it. Use desktop search to find your
-		bookmarks. With <a href="/tangent">Tangent</a>, see Methodsave buttons all
-		over the Web.
+		Methodsave archives websites. Methodsave uses JSON-LD. Your bookmarks will
+		outlive us and them.
 	</p>
-	<h2>The new standard for Android</h2>
+	<h2>The new standard for Android.</h2>
 	<p>
 		Other bookmark managers are so bad at Android support that they <a
 			rel="nofollow"
@@ -60,6 +60,6 @@ import Layout from "../../layouts/Layout.astro"
 <style>
 	svg {
 		vertical-align: bottom;
-		fill: currentColor;
+		fill: currentColor !important;
 	}
 </style>

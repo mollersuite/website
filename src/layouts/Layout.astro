@@ -9,7 +9,7 @@ type Props = {
 const { title, description } = Astro.props.frontmatter ?? Astro.props
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -38,10 +38,9 @@ const { title, description } = Astro.props.frontmatter ?? Astro.props
 					{
 						Object.entries({
 							Etcetera: "/",
-							Philosophy: "/philosophy/",
-							Tangent: "/tangent/",
-							Methodsave: "/methodsave/",
-							Oxymoron: "https://moron.center",
+							// Philosophy: "/philosophy/",
+							// "@etc@moron.center": "https://moron.center/@etc"
+							"@etc@owo.community": "https://owo.community/@etc"
 						}).map(([name, href]) => (
 							<li>
 								<a
@@ -64,12 +63,6 @@ const { title, description } = Astro.props.frontmatter ?? Astro.props
 			</nav>
 		</header>
 		<slot />
-		<footer>
-			Contains several beagles. <a
-				href="https://www.gnu.org/licenses/gpl-3.0"
-				rel="license">🄯 Etcetera Development, {new Date().getFullYear()}</a
-			>
-		</footer>
 	</body>
 </html>
 <style>
@@ -84,8 +77,8 @@ const { title, description } = Astro.props.frontmatter ?? Astro.props
 	[aria-current="page"] {
 		font-weight: bold;
 	}
-	footer {
-		text-align: center;
+	a {
+		font-family: "Inter Display", "Inter", system-ui, sans-serif;
 	}
 </style>
 <style is:global>
@@ -96,8 +89,28 @@ const { title, description } = Astro.props.frontmatter ?? Astro.props
 		line-height: 1.5;
 		accent-color: #6acb5d;
 	}
+	h1,
+	h2,
+	h3 {
+		font-family: "Inter Display", "Inter", system-ui, sans-serif;
+	}
 	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-			DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+		font-family:
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+	}
+
+	mark::before {
+		content: "⚠ ";
+	}
+	mark {
+		border-radius: 1ch;
+		padding-inline: 1ch;
 	}
 </style>

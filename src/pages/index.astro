@@ -1,76 +1,74 @@
 ---
 import Etcetera from "../components/Etcetera.astro"
 import Layout from "../layouts/Layout.astro"
-import anonymous from "../assets/Message To Josh Miller.mp4?url"
-import {
-	siJavascript,
-	siRust,
-	siLua,
-	siZig,
-	siNixos,
-	siCsharp,
-	siGo,
-	siPython,
-} from "simple-icons"
-
-const people = [
+import wavesmiley from "../assets/wave.gif"
+import { Picture } from "astro:assets"
+const people: readonly {
+	name: string
+	href?: string
+	role: string
+	country: string
+}[] = [
 	{
 		name: "Jack",
 		href: "https://jack.cab",
-		role: "founder, designer, and developer",
+		role: "founder, designer, & fullstack developer",
 		country: "🇺🇸",
-		langs: [siJavascript, siLua, siRust, siNixos],
 	},
 	{
 		name: "Charlie",
-		href: "https://github.com/trollar",
-		role: "founder and developer",
+		href: "https://coolviruses.download/@charlie",
+		role: "founder & backend developer",
 		country: "🇬🇧",
-		langs: [siJavascript, siLua, siRust, siNixos, siZig, siCsharp],
 	},
 	{
 		name: "split",
 		href: "https://me.fyle.uk",
-		role: "designer and developer",
+		role: "designer & fullstack developer",
 		country: "🇺🇸",
-		langs: [siJavascript, siLua],
 	},
 	{
 		name: "Wavi",
 		href: "https://fur.dev",
-		role: "backend developer",
+		role: "fullstack developer",
 		country: "🇬🇧",
-		langs: [siJavascript, siLua, siRust],
-	},
-	{
-		name: "nickk",
-		href: "https://github.com/nickk431",
-		role: "designer",
-		country: "🇺🇸",
-		langs: [siJavascript, siLua, siGo, siPython, siRust],
 	},
 	{
 		name: "Bongo",
 		href: "https://github.com/poopyhead121",
-		role: "backend developer",
+		role: "backend & android developer",
 		country: "🇺🇸",
-		langs: [siJavascript, siPython, siLua],
 	},
 	{
 		name: "mau",
 		href: "https://github.com/maumaumaumaumaumau",
 		role: "backend developer",
 		country: "🇨🇱",
-		langs: [siJavascript, siLua],
 	},
 	{
-		name: "Auxnos",
-		href: "https://github.com/Auxnos",
-		role: "backend developer",
+		name: "Cluster",
+		href: "https://cluster.coolviruses.download",
+		role: "scapegoat",
 		country: "🇺🇸",
-		langs: [siJavascript, siLua],
 	},
-]
+	{
+		name: "Malice",
+		href: "https://maliciousmeaning.dev",
+		role: "designer & fullstack developer",
+		country: "🇳🇿",
+	},
+	{
+		name: "aa",
+		href: "https://aagaming.me",
+		role: "fullstack developer",
+		country: "🇺🇸",
+	},
+	{
+		name: "xzen",
+		role: "scapegoat",
+		country: "🇺🇸",
+	},
+].sort((a, b) => a.name.localeCompare(b.name))
 ---
 
 <Layout
@@ -79,15 +77,37 @@ const people = [
 >
 	<meta name="og:title" content="Etcetera" slot="head" />
 	<p>
-		<a href="#people">We</a> write software, usually <a
-			href="/philosophy#out-of-spite">out of spite</a
-		>. Not-for-profit, always <a
+		We write software, usually out of spite. Not-for-profit, always <a
 			href="https://www.gnu.org/philosophy/free-sw"
 			title="What is free software?">free as in freedom</a
 		>.
 	</p>
-
+	<mark>Warning: Methodsave and Oxymoron do not exist.</mark>
 	<ul class="bento">
+		<li>
+			<!-- <article class="featured">
+				<h1><a href="/unleashed">Everything unleashed</a></h1>
+				<p>
+					Method is coming. Today is the largest launch in Etcetera's 3-year
+					history. Introducing Methodsave, Retune, monofile v2, Tangent, and
+					Oxymoron.
+				</p>
+			</article> -->
+			<Picture src={wavesmiley} class="featured" alt="wavesmiley" width="382" height="225" />
+		</li>
+		<h2
+			style="position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0,0,0,0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;"
+		>
+			Projects
+		</h2>
 		<li>
 			<a style="grid-area:methodsave" href="/methodsave">
 				<h3>
@@ -118,52 +138,74 @@ const people = [
 			</a>
 		</li>
 		<li>
-			<a href="/tangent/" style="grid-area:tangent">
+			<a href="https://fyle.uk" style="grid-area:monofile">
 				<h3>
-					<Etcetera>
-						<path
-							d="m 106.11375,171.00703 c -20.80597,0 -37.79325,16.98728 -37.79325,37.79325 0,20.80597 16.98728,37.79325 37.79325,37.79325 20.80597,0 37.79325,-16.98728 37.79325,-37.79325 0,-20.80597 -16.98728,-37.79325 -37.79325,-37.79325 z m 9.29084,11.65292 c 4.80289,1.69283 8.9759,4.6651 12.12534,8.50348 h -6.18077 c -1.53535,-3.0707 -3.52343,-5.94457 -5.94457,-8.50348 z m -18.73915,0.0591 c -2.38176,2.55891 -4.36985,5.39341 -5.9052,8.44442 h -6.06267 c 3.11008,-3.799 7.24371,-6.73192 11.96787,-8.44442 z m 6.92876,0.4921 v 7.95232 h -7.04687 c 1.83062,-2.99196 4.17301,-5.68867 7.04687,-7.95232 z m 5.0391,0.0787 c 2.81481,2.24397 5.13752,4.92099 6.94844,7.87359 h -6.94844 z m -27.22295,12.91269 h 7.26339 c -1.08261,3.24786 -1.75188,6.65319 -1.96839,10.0782 h -8.18854 c 0.31494,-3.60217 1.3385,-7.0075 2.89354,-10.0782 z m 12.63712,0 h 9.54673 v 10.0782 H 91.78381 c 0.23621,-3.44469 0.9842,-6.85003 2.26366,-10.0782 z m 14.58583,0 h 9.44832 c 1.27945,3.22817 2.02744,6.63351 2.26365,10.0782 H 108.6333 Z m 14.82204,0 h 7.36181 c 1.55504,3.0707 2.5786,6.47603 2.89355,10.0782 h -8.28696 c -0.21653,-3.42501 -0.88578,-6.83034 -1.9684,-10.0782 z m -44.93853,15.1173 h 8.18854 c 0.2362,3.42502 0.88578,6.83035 1.98808,10.0782 h -7.28308 c -1.55504,-3.0707 -2.5786,-6.47603 -2.89354,-10.0782 z m 13.267,0 h 11.81039 v 10.0782 h -9.52705 c -1.27946,-3.20849 -2.02745,-6.6335 -2.28334,-10.0782 z m 16.84949,0 h 11.71197 c -0.25589,3.4447 -1.00388,6.86971 -2.28334,10.0782 h -9.42863 z m 16.79044,0 h 8.28696 c -0.31495,3.60217 -1.33851,7.0075 -2.89355,10.0782 h -7.38149 c 1.1023,-3.24785 1.75187,-6.65318 1.98808,-10.0782 z m -40.72617,15.1173 h 6.10204 c 1.57472,3.0707 3.58249,5.94457 6.0233,8.50348 -4.80289,-1.69283 -8.97589,-4.6651 -12.12534,-8.50348 z m 11.90882,0 h 6.98781 v 7.81454 c -2.83449,-2.22429 -5.17689,-4.88162 -6.98781,-7.81454 z m 12.02691,0 h 6.8894 c -1.79125,2.91323 -4.09427,5.5312 -6.8894,7.73581 z m 12.69617,0 h 6.20046 c -3.18881,3.87775 -7.42087,6.86971 -12.28281,8.54285 2.48018,-2.55892 4.50763,-5.45247 6.08235,-8.54285 z m 0,0"
+					<svg
+						version="1.1"
+						height="20"
+						style="vertical-align:middle"
+						viewBox="0 0 3.175 3.9712"
+					>
+						<defs>
+							<linearGradient
+								id="gradient"
+								x1="39.034"
+								x2="42.209"
+								y1="121.39"
+								y2="121.39"
+								gradientTransform="translate(-39.034 -117.68)"
+								gradientUnits="userSpaceOnUse"
+							>
+								<stop stop-color="currentColor" stop-opacity="0" offset="0"
+								></stop>
+								<stop stop-color="currentColor" offset=".5"></stop>
+							</linearGradient>
+						</defs>
+						<path d="m0 3.442" fill="currentColor"></path>
+						<path d="m0 3.442v.52917h3.175v-.52917z" fill="url(#gradient)"
 						></path>
-					</Etcetera> Tangent
+						<path
+							d="m1.5875 1.9595c-.14573 0-.26458.11885-.26458.26458v.05l-.60668-.60669c-.04961-.0496-.11679-.0775-.18707-.0775s-.13746.0279-.18707.0775c-.10335.10336-.10335.27079 0 .37414l1.0583 1.0583c.10335.10335.27078.10335.37414 0l1.0583-1.0583c.10335-.10335.10335-.27078 0-.37414-.10335-.10335-.27078-.10335-.37414 0l-.60668.60669v-.05c0-.14573-.11886-.26458-.26458-.26458z"
+							fill="currentColor"></path>
+						<path
+							d="m1.899-2.8827e-6h-.57727l-.56825.34727v.53217l.50511-.30217h.01353v1.7318h.62688z"
+							fill="currentColor"></path>
+					</svg> monofile
 				</h3>
-				<p>
-					<strong>Go on tangents.</strong> The browser built for research.
-				</p>
+				<p>File sharing over the Discord CDN.</p>
 			</a>
 		</li>
 
 		<li>
-			<a style="grid-area:masstable">
-				<h3>Masstable</h3>
-				<p>Nushell meets GTK. A terminal beyond ASCII art.</p>
+			<a style="grid-area:retune" href="https://retune.stream">
+				<h3>
+					<svg style="vertical-align:sub" viewBox="-40 0 220 226.838">
+						<path
+							d="M81.167 35.547C88.991 26.155 94.161 13.022 92.722 0 81.52.484 68.016 7.471 59.941 16.874c-7.24 8.315-13.495 21.699-11.815 34.47 12.418.965 25.199-6.385 33.032-15.787"
+						></path><path
+							d="M46.077 77.432h14.936c2.975 0 5.834.873 8.284 2.508l44.806 29.87c8.868 5.893 8.868 18.962 0 24.854l-44.806 29.871a14.87 14.87 0 0 1-8.284 2.508H46.077Zm0 0"
+						></path><path
+							d="M112.824 56.078c31.506 18.67 45.158 57.235 32.381 91.542-12.778 34.365-48.31 54.61-84.366 48.134-36.057-6.476-62.254-37.865-62.254-74.506 0-8.226-6.71-14.936-14.936-14.936-8.285 0-14.936 6.71-14.936 14.936 0 51.11 36.523 94.869 86.816 103.912 50.293 9.044 99.828-19.195 117.681-67.096 17.795-47.901-1.225-101.636-45.217-127.658-7.06-4.2-16.22-1.866-20.42 5.25-4.201 7.06-1.867 16.22 5.25 20.422zm0 0"
+						></path><path
+							d="M7.395 136.418h-41.95c-3.15 0-6.068-1.635-7.643-4.317-1.634-2.744-1.75-6.068-.235-8.869l21.062-39.499c1.4-2.624 4.143-4.26 7.118-4.318 2.976 0 5.718 1.575 7.177 4.201l22.112 39.791c1.517 2.684 1.517 6.01-.115 8.694a8.72 8.72 0 0 1-7.527 4.317zm0 0"
+						></path><path
+							d="m10.662 83.266-31.214-24.33a8.92 8.92 0 0 1-3.326-8.168c.351-3.09 2.334-5.776 5.251-7.06l35.474-15.636c2.8-1.224 6.068-.873 8.518.933 2.45 1.81 3.793 4.843 3.443 7.877L24.14 77.606c-.35 2.975-2.334 5.601-5.076 6.768a8.393 8.393 0 0 1-8.402-1.108zm0 0"
+						></path></svg
+					> Retune
+				</h3>
+				<p>
+					A cross-platform music client based on Cider Classic, without the
+					bullshit.
+				</p>
 			</a>
-		</li>
-		<li>
-			<video style="grid-area:more" src={anonymous} controls width="424.45"
-			></video>
 		</li>
 	</ul>
 	<h2 id="people">People</h2>
 	<ul class="root">
 		{
-			people.map(({ name, href, role, country, langs }) => (
+			people.map(({ name, href, role, country }) => (
 				<li>
-					<span class="flex">
-						<span>
-							<a {href}>{name}</a>
-							{" " + role}
-						</span>
-						<ul>
-							<li style="font-size:24px">{country}</li>
-							{langs
-								.sort((a, b) => a.title.localeCompare(b.title))
-								.map((icon) => (
-									<li>
-										<Fragment set:html={icon.svg} />
-									</li>
-								))}
-						</ul>
-					</span>
+					<a {href}>{name}</a>: {role} {country}
 				</li>
 			))
 		}
@@ -171,18 +213,13 @@ const people = [
 </Layout>
 
 <style lang="scss">
-	.root > li > span {
-		display: flex;
-		flex-wrap: wrap;
-		> span {
-			flex-grow: 1;
-			color: GrayText;
-		}
-		> ul {
-			list-style: none;
-			> li {
-				display: inline;
-			}
+	@media (min-width: 800px) {
+		.root {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 1ch;
+			list-style-position: inside;
+			padding: 0;
 		}
 	}
 	li :global(svg) {
@@ -200,17 +237,17 @@ const people = [
 			display: grid;
 			grid-template-areas:
 				"methodsave methodsave oxymoron"
-				"tangent more oxymoron"
-				"tangent masstable masstable";
-			grid-template-columns: 0.4fr 1fr 0.4fr;
-			grid-template-rows: 0.3fr 1fr 0.3fr;
+				"monofile more oxymoron"
+				"monofile retune retune";
+			grid-template-columns: 0.5fr 1fr 0.5fr;
+			grid-template-rows: 0.5fr 0fr 0.5fr;
 			gap: 10px;
 			padding: 0;
 		}
 		li {
 			display: contents;
 		}
-		a {
+		li > a {
 			display: flex;
 			flex-direction: column;
 			background: Field;
@@ -242,10 +279,14 @@ const people = [
 			}
 		}
 
-		video {
-			max-width: 424.45px;
+		.featured {
+			grid-area: more;
+			max-width: 382px;
 			width: 100%;
 			margin: auto;
+			border-radius: 1ch;
+			padding: 1ch;
+			box-sizing: border-box;
 		}
 	}
 </style>
