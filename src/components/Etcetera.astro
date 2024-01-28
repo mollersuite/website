@@ -2,7 +2,7 @@
 	xmlns="http://www.w3.org/2000/svg"
 	viewBox="0 0 173.8 275.72"
 	height="20"
-	style="vertical-align: middle"
+	style="vertical-align:middle;overflow:visible"
 	fill="currentColor"
 >
 	<circle cx="37.13" cy="26.43" r="21.6"></circle>
@@ -13,3 +13,30 @@
 		<circle cx="102.68" cy="219.58" r="56.14" class="bottom"></circle>
 	</slot>
 </svg>
+<style>
+	@keyframes bounce {
+		0% {
+			transform: translateY(0);
+		}
+		50% {
+			transform: translateY(-15px);
+		}
+		100% {
+			transform: translateY(0);
+		}
+	}
+	@media not (prefers-reduced-motion) {
+		svg:has(.bottom) circle {
+			animation-name: bounce;
+			animation-duration: 1s;
+			animation-timing-function: ease-in-out;
+			animation-iteration-count: infinite;
+		}
+		svg .middle {
+			animation-delay: 0.1s;
+		}
+		.bottom {
+			animation-delay: 0.2s;
+		}
+	}
+</style>
