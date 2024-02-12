@@ -24,11 +24,11 @@ const { title, description } = Astro.props.frontmatter ?? Astro.props
 			)
 		}
 		<meta name="og:site_name" content="Etcetera" />
+		<meta name="og:title" content={title} />
 		<meta name="theme-color" content="#6acb5d" />
 		<meta name="viewport" content="width=device-width" />
-		<meta name="color-scheme" content="dark light" />
+		<meta name="color-scheme" content="dark" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
 		<slot name="head" />
 	</head>
 	<body>
@@ -38,8 +38,6 @@ const { title, description } = Astro.props.frontmatter ?? Astro.props
 					{
 						Object.entries({
 							Etcetera: "/",
-							// Philosophy: "/philosophy/",
-							// "@etc@moron.center": "https://moron.center/@etc"
 							"@etc@owo.community": "https://owo.community/@etc",
 							Discord: "https://discord.gg/tzKszGAXT7",
 						}).map(([name, href]) => (
@@ -52,7 +50,34 @@ const { title, description } = Astro.props.frontmatter ?? Astro.props
 								>
 									{name === "Etcetera" ? (
 										<>
-											<Etcetera />{" "}
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												viewBox="0 0 173.8 275.72"
+												height="20"
+												style="vertical-align:middle;overflow:visible"
+												fill="currentColor"
+											>
+												<circle cx="37.13" cy="26.43" r="21.6" />
+												<circle
+													cx="34.62"
+													cy="117.87"
+													r="34.62"
+													class="middle"
+												/>
+												<circle
+													cx="119.78"
+													cy="130.68"
+													r="21.6"
+													class="middle"
+												/>
+												<circle cx="127.16" cy="46.64" r="46.65" />
+													<circle
+														cx="102.68"
+														cy="219.58"
+														r="56.14"
+														class="bottom"
+													/>
+											</svg>{" "}
 										</>
 									) : null}
 									{name}
@@ -79,39 +104,55 @@ const { title, description } = Astro.props.frontmatter ?? Astro.props
 		font-weight: bold;
 	}
 	a {
-		font-family: "Inter Display", "Inter", system-ui, sans-serif;
+		font-family: "Inter Display", Inter, sans-serif;
+	}
+	@keyframes bounce {
+		0% {
+			transform: translateY(0);
+		}
+		50% {
+			transform: translateY(-15px);
+		}
+		100% {
+			transform: translateY(0);
+		}
+	}
+	@media not (prefers-reduced-motion) {
+		circle {
+			animation-name: bounce;
+			animation-duration: 1s;
+			animation-timing-function: ease-in-out;
+			animation-iteration-count: infinite;
+		}
+		.middle {
+			animation-delay: 0.1s;
+		}
+		.bottom {
+			animation-delay: 0.2s;
+		}
 	}
 </style>
 <style is:global>
 	:root {
-		font-family: system-ui, sans-serif;
-		max-width: 800px;
+		font-family: Inter, sans-serif;
+		max-width: 1200px;
 		margin-inline: auto;
 		line-height: 1.5;
 		accent-color: #6acb5d;
+		background: #000;
+	}
+	a {
+		color: #6acb5d;
+	}
+	a:active {
+		color: ActiveText;
 	}
 	h1,
 	h2,
 	h3 {
-		font-family: "Inter Display", "Inter", system-ui, sans-serif;
+		font-family: "Inter Display", Inter, sans-serif;
 	}
 	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-
-	mark::before {
-		content: "⚠ ";
-	}
-	mark {
-		border-radius: 1ch;
-		padding-inline: 1ch;
+		font-family: monospace, monospace;
 	}
 </style>
