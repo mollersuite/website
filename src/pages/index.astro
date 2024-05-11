@@ -4,78 +4,47 @@ import Circles from "../components/Circles.astro"
 const people: readonly {
 	name: string
 	href?: string
-	role: string
 	country: string
 }[] = [
 	{
 		name: "Jack",
 		href: "https://jack.cab",
-		role: "founder, designer, and fullstack developer",
 		country: "🇺🇸",
 	},
 	{
 		name: "Charlie",
 		href: "https://coolviruses.download/@charlie",
-		role: "founder and backend developer",
 		country: "🇬🇧",
 	},
 	{
 		name: "split",
 		href: "https://me.fyle.uk",
-		role: "designer and fullstack developer",
 		country: "🇺🇸",
 	},
 	{
 		name: "mau",
 		href: "https://mau.monster",
-		role: "backend developer",
 		country: "🇨🇱",
 	},
 	{
 		name: "Malice",
 		href: "https://maliciousmeaning.dev",
-		role: "designer and fullstack developer",
 		country: "🇳🇿",
 	},
 	{
 		name: "aa",
 		href: "https://aagaming.me",
-		role: "fullstack developer",
 		country: "🇺🇸",
 	},
 ].sort((a, b) => a.name.localeCompare(b.name))
 ---
 
-<Layout
-	title="Etcetera Development"
-	description="We write software, usually out of spite. Not-for-profit, always free as in freedom.">
-	<!-- <h1 class="tagline">
-		<svg
-			viewBox="0 0 64.0997 21.919"
-			height="90px"
-			width="372px"
-			fill="currentColor"
-			style="vertical-align:sub"
-			aria-label="Everything">
-			<circle cx="52.375" cy=".698167" r=".570367"></circle>
-			<circle cx="54.7523" cy="1.23184" r="1.23184"></circle>
-			<circle cx="52.3087" cy="3.11273" r=".914172"></circle>
-			<circle cx="54.5575" cy="3.45098" r=".570367"></circle>
-			<path
-				d="m-13.2778 18.0035v-13.5049h9.68912v2.39282h-6.89749v3.12698h6.38086v2.32938h-6.38086v3.26294h6.89749v2.39282zm13.9309 0-3.54392-9.57129h2.80069l1.57709 4.73126q.181275.56195.353485 1.13296.172211.56195.335358 1.13297.163147-.57102.326294-1.13297.172211-.571014.344421-1.13296l1.55896-4.73126h2.7735l-3.55298 9.57129zm11.6016.21753q-1.4502 0-2.52878-.64352-1.06952-.64353-1.66772-1.76743-.589142-1.13296-.589142-2.58316 0-1.45926.598205-2.59222.60727-1.13296 1.66772-1.77649 1.06046-.643524 2.42908-.643524 1.41394 0 2.46533.634461 1.06046.625396 1.6496 1.7493.598206 1.11484.598206 2.5741v.716034h-6.80685q.03626 1.06046.625396 1.69492.589142.63446 1.64053.63446.77948 0 1.29611-.33536.525696-.33536.70697-.88824h2.43814q-.172211.95169-.806671 1.67679-.634461.72509-1.59522 1.14202-.960754.40787-2.12091.40787zm-2.16623-6.03644h4.26901q-.0997-.897309-.670716-1.41394-.56195-.525696-1.46832-.525696-.897309 0-1.45926.525696-.56195.516632-.670715 1.41394zm8.2208 5.81891v-9.57129h2.5741v1.63147h.02719q.262848-.861053.824798-1.27798.561951-.416931 1.51364-.416931.235656 0 .425994.0091.199402.0091.362549.0091v2.27499q-.145019-.0091-.480377-.02719-.335358-.01813-.670715-.01813-.824799 0-1.36862.561951-.53476.56195-.53476 1.64053v5.18444zm7.42319 3.78864v-2.11185h1.21454q.480377 0 .70697-.23566.235657-.22659.425995-.77948l.262848-.6979-3.67987-9.53504h2.80069l1.60428 4.73126q.163147.516632.317231 1.03326.163146.51663.31723 1.03326.154083-.51663.31723-1.03326.163147-.525696.326294-1.03326l1.61334-4.73126h2.7735l-4.21463 11.0487q-.453186 1.19641-1.17828 1.7493-.725098.56195-1.83994.56195zm14.8101-13.3599v2.09372h-1.95776v4.5228q0 .48944.190338.67978.199402.18127.743225.18127h1.0242v2.09372h-1.5499q-1.58615 0-2.33844-.61633-.743226-.61633-.743226-1.92151v-9.6438h2.6738v2.61035zm4.01523 4.25088v5.3204h-2.6738v-13.5049h2.6738v5.37479q.480377-.788544 1.20548-1.21454.734161-.425995 1.74023-.425995 1.5227 0 2.43814.987946.915436.978882.915436 2.79163v5.99112h-2.66473v-5.50168q0-.960754-.46225-1.45926-.46225-.507568-1.29611-.507568-.824798 0-1.35049.516632t-.525696 1.63147zm8.1936 5.3204v-9.57129h2.6738v9.57129zm1.33237-10.7768q-.661651 0-1.09671-.398804-.435058-.407868-.435058-1.0242t.435058-1.01514q.435059-.407868 1.09671-.407868.652588 0 1.08765.407868.435059.398803.435059 1.01514t-.435059 1.0242q-.435059.398804-1.08765.398804zm5.90048 5.45636v5.3204h-2.6738v-9.57129h2.62848v1.50458q.489441-.815735 1.2236-1.25986.734162-.444123 1.76743-.444123 1.5227 0 2.43814.987946.915435.978882.915435 2.79163v5.99112h-2.66473v-5.50168q0-.960754-.46225-1.45926-.46225-.507568-1.29611-.507568-.824799 0-1.3505.516632-.525695.516632-.525695 1.63147zm12.7164 9.23593q-2.03934 0-3.15418-.85199t-1.31424-2.2478h2.5741q.14502.54382.643524.83386.498505.2991 1.25079.2991.978882 0 1.50458-.53476.53476-.53476.53476-1.56802v-1.46832h-.0091q-.425995.84292-1.16016 1.24173-.725098.38974-1.66772.38974-1.25079 0-2.18436-.6254-.933564-.6254-1.4502-1.71304-.507568-1.09671-.507568-2.52878 0-1.44113.516632-2.5469.525696-1.10577 1.4502-1.73117.933564-.634461 2.15717-.634461.924499 0 1.6496.398804.734161.38974 1.19641 1.18735h.0091v-1.38675h2.63754v9.19968q0 1.51364-.598206 2.45627-.589142.95169-1.64053 1.38675-1.05139.44412-2.43814.44412zm-.108765-6.0455q1.01514 0 1.63147-.75229t.616333-2.01215q0-1.25079-.616333-2.00308t-1.63147-.752289q-.969818 0-1.55896.725098-.580078.716034-.580078 2.03027 0 1.32331.580078 2.0484.589142.71604 1.55896.71604z"
-			></path>
-		</svg> unleashed.
-	</h1> -->
+<Layout title="Etcetera Development" description="Free software, made out of spite.">
 	<Circles />
-	<p>
-		<abbr title="et cetera">etc.</abbr>
-		<abbr title="established">est.</abbr> 2020. We make <a
-			href="https://www.gnu.org/philosophy/free-sw">free software</a
-		>. We do it out of spite. <a href="https://wavesmiley.com">Wave smiley</a> is our mascot.
-	</p>
 	<h2>Software</h2>
+	<p>Free software, made out of spite.</p>
 	<div>
-		<!-- <article>
+		<article inert aria-disabled>
 			<h1>
 				<a href="https://tangent.surf"
 					><svg width="20.367394208" height="20" viewBox="0 0 41.2331 57.2646">
@@ -86,9 +55,9 @@ const people: readonly {
 					</svg> Tangent</a
 				>
 			</h1>
-			<p>The <em>user</em> agent.</p>
+			<p>Go on tangents. The open alternative to Arc Browser.</p>
 		</article>
-		<article>
+		<article inert aria-disabled>
 			<h1>
 				<a href="https://github.com/mollersuite/oxymoron"
 					><svg height="20" viewBox="0 0 173.8 275.72">
@@ -102,8 +71,8 @@ const people: readonly {
 					</svg> Oxymoron</a
 				>
 			</h1>
-			<p>An ActivityPub server for morons.</p>
-		</article> -->
+			<p>ActivityPub server built for the edge.</p>
+		</article>
 		<article>
 			<h1>
 				<a href="https://fyle.uk"
@@ -138,9 +107,9 @@ const people: readonly {
 			<h1>
 				<a href="/trollsmile">trollsmile</a>
 			</h1>
-			<p>stupid Discord bot (user-install only)</p>
+			<p>A Discord bot designed for user install.</p>
 		</article>
-		<!-- <article>
+		<article inert aria-disabled>
 			<h1>
 				<a href="https://retune.stream"
 					><svg viewBox="-40 0 220 226.838" height="20">
@@ -159,17 +128,98 @@ const people: readonly {
 				>
 			</h1>
 			<p>
-				A cross-platform music client based on Cider Classic, without the
-				bullshit.
+				<!-- I don't want the devs searching their name and seeing this -->
+				<span data-nosnippet>A cross-platform music client based on Cider Classic, without the bullshit.</span>
 			</p>
-		</article> -->
+		</article>
+		<article inert aria-disabled>
+			<h1>
+				<a href="/etcet"
+					><svg
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 173.8 190"
+						height="20"
+						fill="currentColor">
+						<circle cx="37.13" cy="26.43" r="21.6"></circle>
+						<circle cx="34.62" cy="117.87" r="34.62"></circle>
+						<circle cx="119.78" cy="130.68" r="21.6"></circle>
+						<circle cx="127.16" cy="46.64" r="46.65"></circle>
+					</svg> Etcet</a
+				>
+			</h1>
+			<p>Save anything with 0.5 taps. The semantic sequel to screenshots for Android.</p>
+		</article>
+		<article inert aria-disabled>
+			<h1>
+				<a href="/desktop"
+					><svg
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 173.8 275.72"
+						height="20"
+						fill="currentColor">
+						<circle cx="37.13" cy="26.43" r="21.6"></circle>
+						<circle cx="34.62" cy="117.87" r="34.62"></circle>
+						<circle cx="119.78" cy="130.68" r="21.6"></circle>
+						<circle cx="127.16" cy="46.64" r="46.65"></circle>
+						<circle cx="102.68" cy="219.58" r="56.14"></circle>
+					</svg> Etcetera Desktop</a
+				>
+			</h1>
+			<p>Everything unleashed. Our desktop environment based on niri.</p>
+		</article>
+		<article inert aria-disabled>
+			<h1>
+				<a href="/masstables"
+					><svg
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 173.8 275.72"
+						height="20"
+						fill="currentColor">
+						<circle cx="37.13" cy="26.43" r="21.6"></circle>
+						<circle cx="34.62" cy="117.87" r="34.62"></circle>
+						<circle cx="119.78" cy="130.68" r="21.6"></circle>
+						<circle cx="127.16" cy="46.64" r="46.65"></circle>
+						<circle cx="102.68" cy="219.58" r="56.14"></circle>
+					</svg> Masstables</a
+				>
+			</h1>
+			<p>A Nushell REPL that doesn't emulate 1980s hardware.</p>
+		</article>
+		<article inert aria-disabled class="discontinued">
+			<h1>
+				<a href="https://github.com/mollersuite/mollermethod"
+					><svg
+						width="17.676845"
+						height="21.892095"
+						viewBox="0 0 4.676999 5.792283"
+						fill="currentColor">
+						<g transform="translate(-64.230446 -240.27377)">
+							<path
+								d="M65.153669 241.83272c-.265617 0-.479558.26768-.479558.59945v.12402c0 .23564.107487.43822.264584.5364v1.38596c0 .58188.476456 1.05834 1.058333 1.05834h1.371493c.111621.31626.41031.52813.745174.52916.438216 0 .79375-.35553.79375-.79375v-2.38125c0-.43821-.355534-.79375-.79375-.79375h-1.195793l-.179834.25425c-.121956.17467-.321427.27802-.534334.27802h-.47439a.85785.85785 0 0 0 .0031-.0734v-.12402c.000001-.33177-.21394-.59945-.479557-.59945zm2.039152.79375h.127124v2.38125h-1.322917c-.295589 0-.529167-.23358-.529167-.52917v-1.31981h.735873c.384472 0 .745174-.18707.967383-.5023zm-.426848.52917c-.133325 0-.239778.10645-.239778.23978v.0496c0 .13333.106453.23978.239778.23978h.04961c.133325 0 .239779-.10645.239779-.23978v-.0496c0-.13333-.106454-.23978-.239779-.23978zm0 0"
+							></path>
+							<circle cx="64.583633" cy="240.52528" r=".205465"></circle>
+							<circle cx="64.559761" cy="241.39508" r=".329315"></circle>
+							<circle cx="65.36982" cy="241.51694" r=".205465"></circle>
+							<circle cx="65.440025" cy="240.71751" r=".443747"></circle>
+						</g>
+					</svg> mollermethod</a
+				>
+			</h1>
+			<p>
+				Scripting, unleashed. DomainX alternative that's written in TypeScript and fully
+				open source.
+			</p>
+		</article>
 	</div>
 	<h2 id="people">People</h2>
+	<p>
+		We're Etceterans. <a href="https://discord.gg/tzKszGAXT7">Join our Discord</a>.
+	</p>
 	<ul style="line-height:2">
 		{
-			people.map(({ href, name, role, country }) => (
+			people.map(({ href, name, country }) => (
 				<li>
-					{country} <a {href}>{name}</a> is our {role}
+					<a {href}>{name}</a> {country}
 				</li>
 			))
 		}
@@ -197,11 +247,40 @@ const people: readonly {
 			grid-gap: 1ch;
 		}
 		article {
-			background: #090909;
+			background: #111;
 			border-radius: 1ch;
 		}
 	}
 	article {
+		position: relative;
+		&[inert] {
+			pointer-events: none;
+			@media (min-width: 800px) {
+				background: #090909;
+			}
+			a,
+			p {
+				opacity: 0.5;
+			}
+			&.discontinued::before {
+				content: "Discontinued";
+			}
+			&.discontinued {
+				background: #200;
+			}
+			&::before {
+				color: CanvasText;
+				content: "Coming soon";
+				position: absolute;
+				font-size: large;
+				z-index: 1;
+				font-weight: bold;
+				font-family: "Inter Display", Inter, sans-serif;
+				right: 0;
+				top: 0;
+				transform: rotate(5deg);
+			}
+		}
 		a {
 			padding: 1ch;
 			font-family: "Super Inter Display", "Inter Display", Inter, sans-serif;
