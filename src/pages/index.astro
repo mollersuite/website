@@ -42,7 +42,7 @@ const people: readonly {
 <Layout title="Etcetera Development" description="Free software, made out of spite.">
 	<Circles />
 	<h2>Software</h2>
-	<p>Free software, made out of spite.</p>
+	<p>Free software, made out of spite. Not all of these will release.</p>
 	<div>
 		<article inert aria-disabled>
 			<h1>
@@ -129,7 +129,9 @@ const people: readonly {
 			</h1>
 			<p>
 				<!-- I don't want the devs searching their name and seeing this -->
-				<span data-nosnippet>A cross-platform music client based on Cider Classic, without the bullshit.</span>
+				<span data-nosnippet
+					>A cross-platform music client based on Cider Classic, without the bullshit.</span
+				>
 			</p>
 		</article>
 		<article inert aria-disabled>
@@ -147,7 +149,7 @@ const people: readonly {
 					</svg> Etcet</a
 				>
 			</h1>
-			<p>Save anything with 0.5 taps. The semantic sequel to screenshots for Android.</p>
+			<p>Save anything with 0.5 taps. Powered by Android's Assist API.</p>
 		</article>
 		<article inert aria-disabled>
 			<h1>
@@ -165,7 +167,8 @@ const people: readonly {
 					</svg> Etcetera Desktop</a
 				>
 			</h1>
-			<p>Everything unleashed. Our desktop environment based on niri.</p>
+			<!-- Too bold to tell Google -->
+			<p><span data-nosnippet>Desktop environment based on niri.</span></p>
 		</article>
 		<article inert aria-disabled>
 			<h1>
@@ -183,7 +186,10 @@ const people: readonly {
 					</svg> Masstables</a
 				>
 			</h1>
-			<p>A Nushell REPL that doesn't emulate 1980s hardware.</p>
+			<p>
+				A Nushell REPL that doesn't emulate 1980s hardware.
+				<small>Masstables is a working title.</small>
+			</p>
 		</article>
 		<article inert aria-disabled class="discontinued">
 			<h1>
@@ -230,15 +236,6 @@ const people: readonly {
 	article svg {
 		fill: currentColor;
 		vertical-align: middle;
-	}
-	@font-face {
-		font-family: "Super Inter Display";
-		src: local("Inter Variable");
-		font-feature-settings: "cv13", "cv11";
-	}
-	.tagline {
-		font-size: 80px;
-		font-family: "Super Inter Display", "Inter Display", Inter, sans-serif;
 	}
 	@media (min-width: 800px) {
 		div {
