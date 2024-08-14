@@ -1,18 +1,16 @@
 {
   "name": "etcetera-website-v2",
-  "type": "module",
   "version": "0.0.1",
+  "dependencies": {
+    "astro": "^4.8.6",
+    "subfont": "^7.2.1"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "astro build && subfont ./dist/index.html --no-fallbacks --inline-css --in-place",
     "preview": "astro preview",
     "astro": "astro"
   },
-  "dependencies": {
-    "astro": "^4.8.6",
-    "sass": "^1.77.2",
-    "sharp": "^0.33.4",
-    "simple-icons": "^9.21.0"
-  }
+  "type": "module"
 }
