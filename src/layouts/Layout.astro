@@ -23,7 +23,13 @@ const { title, description } = Astro.props.frontmatter ?? Astro.props
 				</>
 			)
 		}
-		<meta name="og:site_name" content="ETCETERA DEVELOPMENT" />
+		{
+			Astro.url.pathname === "/" ? (
+				<meta name="og:image" content="/embed.webp" />
+			) : (
+				<meta name="og:site_name" content="ETCETERA DEVELOPMENT" />
+			)
+		}
 		<meta name="og:title" content={title} />
 		<meta name="theme-color" content="#6acb5d" />
 		<meta name="viewport" content="width=device-width" />
