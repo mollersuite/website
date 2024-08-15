@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro"
+import dither from "../dither.png?url"
 ---
 
 <Layout
@@ -66,9 +67,16 @@ import Layout from "../layouts/Layout.astro"
 		<li><a href="/migrate/mymind">mymind → Etcet</a></li>
 		<li><a href="/migrate/fabric">Fabric.so → Etcet</a></li>
 	</ul>
+	<img src={dither} alt="" />
 </Layout>
 
 <style>
+
+	img {
+		image-rendering: pixelated;
+		width: 100%;
+		padding-top: 30ch;
+	}
 	ul {
 		line-height: 2;
 	}
