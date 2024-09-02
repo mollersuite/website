@@ -3,15 +3,13 @@ import Layout from "../layouts/Layout.astro"
 import dither from "../dither.png?url"
 ---
 
-<Layout
-	title="ETCETERA DEVELOPMENT"
-	description="SOFTWARE IN YOUR CONTROL">
+<Layout title="ETCETERA DEVELOPMENT" description="SOFTWARE IN YOUR CONTROL">
 	<h1>
 		Software<br />in your<br />control <svg
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 173.8 275.72"
 			height="100px"
-			style="vertical-align:middle"
+			style="vertical-align:top"
 			fill="currentColor">
 			<circle cx="37.13" cy="26.43" r="21.6"></circle>
 			<circle cx="34.62" cy="117.87" r="34.62"></circle>
@@ -29,49 +27,47 @@ import dither from "../dither.png?url"
 	<p>File sharing over the Discord CDN</p>
 	<a href="https://github.com/mollersuite/monofile">Source</a>
 	<a href="https://fyle.uk">Flagship instance</a>
-	<h3>Etcet</h3>
+	<h3>trollsmile</h3>
+	<p>
+		User-install only Discord bot
+	</p>
+	<a href="https://github.com/mollersuite/trollsmile">Source</a>
+	<a href="https://discord.com/oauth2/authorize?client_id=557323946656006145">Install</a>
+	<!-- <h3>Etcet</h3>
 	<p>The world's fastest bookmark manager<br />Available on Android and Linux</p>
 	<a href="https://f-droid.org/packages/uk.cetera.etcet/">F-Droid</a>
 	<a href="https://flathub.org/apps/details/uk.cetera.Etcet">Flathub</a>
 	<a href="https://github.com/mollersuite/etcet">Source</a>
 	<h3>Tangent</h3>
 	<p>
-		Finally, a <em>user</em> agent<br />The only browser with Dynamic Tabs<br />Powered by
-		WebKit on Linux, Blink on Android
+		A <a href="https://www.w3.org/TR/ethical-web-principles/">user</a> agent.
+		<br />Dynamic Tabs, Super Block, and <a
+			href="https://github.com/mollersuite/tangent/tree/main/libarc">libarc</a
+		>.
 	</p>
 	<a href="https://tangent.surf">Website</a>
-	<a href="https://github.com/mollersuite/tangent">Source</a>
+	<a href="https://github.com/mollersuite/tangent">Source</a> -->
 	<h2>Philosophy</h2>
 	<p>Etceteran propaganda</p>
 	<ul>
 		<li>
-			<a href="https://www.gnu.org/philosophy/who-does-that-server-really-serve.html"
+			<a href="https://www.gnu.org/philosophy/who-does-that-server-really-serve"
 				>Who Does That Server Really Serve</a
-			> You can't trust someone else's server
+			> Third-party servers are out of your control
 		</li>
 		<li>
-			<a href="https://www.gnu.org/philosophy/wwworst-app-store">WWWorst App Store</a> You can't
-			trust web apps
+			<a href="https://www.gnu.org/philosophy/wwworst-app-store">WWWorst App Store</a>
+			Web apps are out of your control
 		</li>
 		<li>
-			<a href="https://en.wikipedia.org/wiki/Enshittification"><q>enshittification</q></a>
-			Software out of your control rots over time
+			<a href="https://ometer.com/preferences">Choosing our Preferences</a> If it needs a toggle,
+			then remove it
 		</li>
-	</ul>
-	<h2>Migrate</h2>
-	<p>
-		Proprietary software is easy. Etcetera is easier. We've written guides to transfer your
-		data.
-	</p>
-	<ul>
-		<li><a href="/migrate/mymind">mymind → Etcet</a></li>
-		<li><a href="/migrate/fabric">Fabric.so → Etcet</a></li>
 	</ul>
 	<img src={dither} alt="" />
 </Layout>
 
 <style>
-
 	img {
 		image-rendering: pixelated;
 		width: 100%;
@@ -94,6 +90,5 @@ import dither from "../dither.png?url"
 	}
 	p {
 		font-size: large;
-		text-transform: uppercase;
 	}
 </style>
