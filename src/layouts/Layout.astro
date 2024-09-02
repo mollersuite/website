@@ -23,7 +23,13 @@ const { title, description } = Astro.props.frontmatter ?? Astro.props
 				</>
 			)
 		}
-		<meta name="og:site_name" content="Etcetera" />
+		{
+			Astro.url.pathname === "/" ? (
+				<meta name="og:image" content="/embed.png" />
+			) : (
+				<meta name="og:site_name" content="ETCETERA DEVELOPMENT" />
+			)
+		}
 		<meta name="og:title" content={title} />
 		<meta name="theme-color" content="#6acb5d" />
 		<meta name="viewport" content="width=device-width" />
@@ -37,27 +43,23 @@ const { title, description } = Astro.props.frontmatter ?? Astro.props
 				<ul>
 					{
 						Object.entries({
-							Etcetera: "/",
-							"@etcetera_dev": "https://twitter.com/etcetera_dev",
-							"github.com/mollersuite": "https://github.com/mollersuite",
-							Discord: "https://discord.gg/tzKszGAXT7",
+							"ETCETERA DEVELOPMENT": "/",
+							TWITTER: "https://x.com/etcetera_dev",
+							GITHUB: "https://github.com/mollersuite",
+							DISCORD: "https://discord.gg/tzKszGAXT7",
 						}).map(([name, href]) => (
 							<li>
 								<a
 									{href}
-									aria-current={
-										Astro.url.pathname === href ? "page" : undefined
-									}
-								>
-									{name === "Etcetera" ? (
+									aria-current={Astro.url.pathname === href ? "page" : undefined}>
+									{name === "ETCETERA DEVELOPMENT" ? (
 										<>
 											<svg
 												xmlns="http://www.w3.org/2000/svg"
 												viewBox="0 0 173.8 275.72"
 												height="20"
 												style="vertical-align:middle;overflow:visible"
-												fill="currentColor"
-											>
+												fill="currentColor">
 												<circle cx="37.13" cy="26.43" r="21.6" />
 												<circle
 													cx="34.62"
@@ -72,12 +74,12 @@ const { title, description } = Astro.props.frontmatter ?? Astro.props
 													class="middle"
 												/>
 												<circle cx="127.16" cy="46.64" r="46.65" />
-													<circle
-														cx="102.68"
-														cy="219.58"
-														r="56.14"
-														class="bottom"
-													/>
+												<circle
+													cx="102.68"
+													cy="219.58"
+													r="56.14"
+													class="bottom"
+												/>
 											</svg>{" "}
 										</>
 									) : null}
@@ -104,47 +106,54 @@ const { title, description } = Astro.props.frontmatter ?? Astro.props
 	[aria-current="page"] {
 		font-weight: bold;
 	}
-	a {
-		font-family: "Inter Display", Inter, sans-serif;
-	}
-	@keyframes bounce {
-		0% {
-			transform: translateY(0);
-		}
-		50% {
-			transform: translateY(-15px);
-		}
-		100% {
-			transform: translateY(0);
-		}
-	}
-	@media not (prefers-reduced-motion) {
-		circle {
-			animation-name: bounce;
-			animation-duration: 1s;
-			animation-timing-function: ease-in-out;
-			animation-iteration-count: infinite;
-		}
-		.middle {
-			animation-delay: 0.1s;
-		}
-		.bottom {
-			animation-delay: 0.2s;
-		}
+	a:active {
+		background: ActiveText;
+		color: black;
 	}
 </style>
 <style is:global>
+	@font-face {
+		font-family: CommitMono;
+		src: url("../fonts/CommitMono-400-Regular.woff2") format("woff2");
+		font-weight: 400;
+		font-display: swap;
+	}
+	@font-face {
+		font-family: CommitMono;
+		src: url("../fonts/CommitMono-400-Italic.woff2") format("woff2");
+		font-weight: 400;
+		font-style: italic;
+		font-display: swap;
+	}
+	@font-face {
+		font-family: CommitMono;
+		src: url("../fonts/CommitMono-700-Regular.woff2") format("woff2");
+		font-weight: 700;
+		font-display: swap;
+	}
+	@font-face {
+		font-family: CommitMono;
+		src: url("../fonts/CommitMono-700-Italic.woff2") format("woff2");
+		font-weight: 700;
+		font-style: italic;
+		font-display: swap;
+	}
+
 	:root {
-		font-family: Inter, sans-serif;
+		font-family: CommitMono, monospace;
 		max-width: 1200px;
 		margin-inline: auto;
 		line-height: 1.5;
+		text-transform: uppercase;
 		accent-color: #6acb5d;
 		background: #000;
-		color: #FFF;
+		color: #fff;
 	}
 	a {
-		color: #6acb5d;
+		background: #6acb5d;
+		color: black;
+		padding: 0.5ch;
+		box-sizing: border-box;
 	}
 	a:active {
 		color: ActiveText;
@@ -152,9 +161,10 @@ const { title, description } = Astro.props.frontmatter ?? Astro.props
 	h1,
 	h2,
 	h3 {
-		font-family: "Inter Display", Inter, sans-serif;
+		/* font-family: "Inter Display", Inter, sans-serif; */
 	}
-	code, pre {
+	code,
+	pre {
 		font-family: monospace, monospace;
 	}
 </style>

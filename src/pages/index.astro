@@ -1,264 +1,99 @@
 ---
 import Layout from "../layouts/Layout.astro"
-import Circles from "../components/Circles.astro"
-const people: readonly {
-	name: string
-	href?: string
-	country: string
-}[] = [
-	{
-		name: "Jack",
-		href: "https://jack.cab",
-		country: "🇺🇸",
-	},
-	// {
-	// 	name: "Charlie",
-	// 	href: "https://charlie.downgraded.uk",
-	// 	country: "🇬🇧",
-	// },
-	{
-		name: "split",
-		href: "https://me.fyle.uk",
-		country: "🇺🇸",
-	},
-	{
-		name: "mau",
-		href: "https://mau.monster",
-		country: "🇨🇱",
-	},
-	{
-		name: "Malice",
-		href: "https://maliciousmeaning.dev",
-		country: "🇳🇿",
-	},
-].sort((a, b) => a.name.localeCompare(b.name))
+import dither from "../dither.png?url"
 ---
 
-<Layout title="Etcetera Development" description="Free software, made out of spite.">
-	<Circles />
-	<h2>Software</h2>
-	<p>Free software, made out of spite. Not all of these will release.</p>
-	<div>
-		<article inert aria-disabled>
-			<h1>
-				<a href="https://tangent.surf"
-					><svg width="20.367394208" height="20" viewBox="0 0 41.2331 57.2646">
-						<path
-							d="m-8.54114 26.7561h14.4657v11.801h23.6563c1.849 0 3.11792-.36255 3.80677-1.08765.68884-.76135 1.03326-2.17529 1.03326-4.24182v-6.4715h14.4657v10.5502c0 6.92469-1.28705 11.9822-3.86115 15.1727-2.61035 3.19043-6.70716 4.78565-12.2904 4.78565l-41.2762-18.7075zm48.1827-6.30835c-13.4239 0-13.4239-20.4478 0-20.4478 13.5101 0 13.5101 20.4478 0 20.4478zm-36.1642 0c-13.4239 0-13.4239-20.4478 0-20.4478 13.5101 0 13.5101 20.4478 0 20.4478z"
-						></path>
-					</svg> Tangent</a
-				>
-			</h1>
-			<p>Go on tangents. The browser by Etcetera.</p>
-		</article>
-		<article inert aria-disabled>
-			<h1>
-				<a href="https://github.com/mollersuite/oxymoron"
-					><svg height="20" viewBox="0 0 173.8 275.72">
-						<path
-							d="m100.289 163.499c-18.3408.76763-35.119 10.4452-44.9885 25.9349-13.3786 21.055-11.2677 48.4154 5.18153 67.1949 16.4492 18.7247 43.3162 24.3722 65.9338 13.8173 3.50916-1.6175 5.04441-5.81204 3.3995-9.3212-1.64492-3.50916-5.81205-5.01701-9.32121-3.3995-16.9701 7.95044-37.1477 3.72848-49.4846-10.363-12.3643-14.0641-13.9544-34.6255-3.86557-50.3893 10.034-15.8186 29.3344-23.0563 47.2914-17.82 17.9844 5.23632 30.3488 21.7129 30.3488 40.4376-.0274.0823-.0274.19191 0 .27415v6.74417c0 2.52221-1.34335 4.79769-3.50916 6.05879-2.19323 1.26111-4.85252 1.26111-7.01832 0-2.19323-1.23369-3.53658-3.56399-3.50916-6.05879v-7.01832c0-15.4348-12.6659-28.0733-28.0733-28.0733-15.4348 0-28.0733 12.6384-28.0733 28.0733 0 15.4074 12.6385 28.0733 28.0733 28.0733 7.3199 0 13.9544-2.93344 18.9714-7.56663 1.56268 1.86424 3.42691 3.48175 5.59273 4.74285 6.49743 3.7559 14.5301 3.7559 21.055 0 6.49743-3.7559 10.5001-10.7194 10.5275-18.2312v-7.01832c-.0274-24.9479-16.504-46.9076-40.4376-53.9259-5.89429-1.69975-11.9805-2.43996-18.0941-2.16581zm2.38514 42.0551c7.81338 0 14.0367 6.19586 14.0367 14.0366 0 7.81337-6.22328 14.0366-14.0367 14.0366-7.84076 0-14.0366-6.22328-14.0366-14.0366 0-7.84077 6.19588-14.0366 14.0366-14.0366z"
-						></path>
-						<circle cx="37.13" cy="26.43" r="21.6"></circle>
-						<circle cx="127.16" cy="46.64" r="46.65"></circle>
-						<circle cx="34.62" cy="117.87" r="34.62"></circle>
-						<circle cx="119.78" cy="130.68" r="21.6"></circle>
-					</svg> Oxymoron</a
-				>
-			</h1>
-			<p>ActivityPub server built for the edge.</p>
-		</article>
-		<article>
-			<h1>
-				<a href="https://fyle.uk"
-					><svg version="1.1" height="20" viewBox="0 0 3.175 3.9712">
-						<defs>
-							<linearGradient
-								id="gradient"
-								x1="39.034"
-								x2="42.209"
-								y1="121.39"
-								y2="121.39"
-								gradientTransform="translate(-39.034 -117.68)"
-								gradientUnits="userSpaceOnUse">
-								<stop stop-color="currentColor" stop-opacity="0" offset="0"></stop>
-								<stop stop-color="currentColor" offset=".5"></stop>
-							</linearGradient>
-						</defs>
-						<path d="m0 3.442"></path>
-						<path d="m0 3.442v.52917h3.175v-.52917z" fill="url(#gradient)"></path>
-						<path
-							d="m1.5875 1.9595c-.14573 0-.26458.11885-.26458.26458v.05l-.60668-.60669c-.04961-.0496-.11679-.0775-.18707-.0775s-.13746.0279-.18707.0775c-.10335.10336-.10335.27079 0 .37414l1.0583 1.0583c.10335.10335.27078.10335.37414 0l1.0583-1.0583c.10335-.10335.10335-.27078 0-.37414-.10335-.10335-.27078-.10335-.37414 0l-.60668.60669v-.05c0-.14573-.11886-.26458-.26458-.26458z"
-						></path>
-						<path
-							d="m1.899-2.8827e-6h-.57727l-.56825.34727v.53217l.50511-.30217h.01353v1.7318h.62688z"
-						></path>
-					</svg> monofile</a
-				>
-			</h1>
-			<p>The Discord-based file sharing service.</p>
-		</article>
-		<article>
-			<h1>
-				<a href="/trollsmile">trollsmile</a>
-			</h1>
-			<p>A Discord bot designed for user install.</p>
-		</article>
-		<article inert aria-disabled>
-			<h1>
-				<a href="/etcet"
-					><svg
-						xmlns="http://www.w3.org/2000/svg"
-						viewBox="0 0 173.8 190"
-						height="20"
-						fill="currentColor">
-						<circle cx="37.13" cy="26.43" r="21.6"></circle>
-						<circle cx="34.62" cy="117.87" r="34.62"></circle>
-						<circle cx="119.78" cy="130.68" r="21.6"></circle>
-						<circle cx="127.16" cy="46.64" r="46.65"></circle>
-					</svg> Etcet</a
-				>
-			</h1>
-			<p>Save anything with 0.5 taps.</p>
-		</article>
-		<article inert aria-disabled>
-			<h1>
-				<a href="/desktop"
-					><svg
-						xmlns="http://www.w3.org/2000/svg"
-						viewBox="0 0 173.8 275.72"
-						height="20"
-						fill="currentColor">
-						<circle cx="37.13" cy="26.43" r="21.6"></circle>
-						<circle cx="34.62" cy="117.87" r="34.62"></circle>
-						<circle cx="119.78" cy="130.68" r="21.6"></circle>
-						<circle cx="127.16" cy="46.64" r="46.65"></circle>
-						<circle cx="102.68" cy="219.58" r="56.14"></circle>
-					</svg> Etcetera Desktop</a
-				>
-			</h1>
-			<p>A desktop environment built different.</p>
-		</article>
-		<article inert aria-disabled>
-			<h1>
-				<a href="/masstables"
-					><svg
-						xmlns="http://www.w3.org/2000/svg"
-						viewBox="0 0 173.8 275.72"
-						height="20"
-						fill="currentColor">
-						<circle cx="37.13" cy="26.43" r="21.6"></circle>
-						<circle cx="34.62" cy="117.87" r="34.62"></circle>
-						<circle cx="119.78" cy="130.68" r="21.6"></circle>
-						<circle cx="127.16" cy="46.64" r="46.65"></circle>
-						<circle cx="102.68" cy="219.58" r="56.14"></circle>
-					</svg> Masstables</a
-				>
-			</h1>
-			<p>
-				A terminal that doesn't emulate 1980s hardware.
-				<small>Masstables is a working title.</small>
-			</p>
-		</article>
-		<article inert aria-disabled class="discontinued">
-			<h1>
-				<a href="https://github.com/mollersuite/mollermethod"
-					><svg
-						width="17.676845"
-						height="21.892095"
-						viewBox="0 0 4.676999 5.792283"
-						fill="currentColor">
-						<g transform="translate(-64.230446 -240.27377)">
-							<path
-								d="M65.153669 241.83272c-.265617 0-.479558.26768-.479558.59945v.12402c0 .23564.107487.43822.264584.5364v1.38596c0 .58188.476456 1.05834 1.058333 1.05834h1.371493c.111621.31626.41031.52813.745174.52916.438216 0 .79375-.35553.79375-.79375v-2.38125c0-.43821-.355534-.79375-.79375-.79375h-1.195793l-.179834.25425c-.121956.17467-.321427.27802-.534334.27802h-.47439a.85785.85785 0 0 0 .0031-.0734v-.12402c.000001-.33177-.21394-.59945-.479557-.59945zm2.039152.79375h.127124v2.38125h-1.322917c-.295589 0-.529167-.23358-.529167-.52917v-1.31981h.735873c.384472 0 .745174-.18707.967383-.5023zm-.426848.52917c-.133325 0-.239778.10645-.239778.23978v.0496c0 .13333.106453.23978.239778.23978h.04961c.133325 0 .239779-.10645.239779-.23978v-.0496c0-.13333-.106454-.23978-.239779-.23978zm0 0"
-							></path>
-							<circle cx="64.583633" cy="240.52528" r=".205465"></circle>
-							<circle cx="64.559761" cy="241.39508" r=".329315"></circle>
-							<circle cx="65.36982" cy="241.51694" r=".205465"></circle>
-							<circle cx="65.440025" cy="240.71751" r=".443747"></circle>
-						</g>
-					</svg> mollermethod</a
-				>
-			</h1>
-			<p>
-				Scripting, unleashed. DomainX alternative that's written in TypeScript and fully
-				open source.
-			</p>
-		</article>
-	</div>
-	<h2 id="people">People</h2>
+<Layout title="ETCETERA DEVELOPMENT" description="SOFTWARE IN YOUR CONTROL">
+	<h1>
+		Software<br />in your<br />control <svg
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 173.8 275.72"
+			height="100px"
+			style="vertical-align:top"
+			fill="currentColor">
+			<circle cx="37.13" cy="26.43" r="21.6"></circle>
+			<circle cx="34.62" cy="117.87" r="34.62"></circle>
+			<circle cx="119.78" cy="130.68" r="21.6"></circle>
+			<circle cx="127.16" cy="46.64" r="46.65"></circle>
+			<circle cx="102.68" cy="219.58" r="56.14"></circle>
+		</svg>
+	</h1>
 	<p>
-		We're Etceterans. <a href="https://discord.gg/tzKszGAXT7">Join our Discord</a>.
+		etc. est. 2020. Etcetera Development is a collective of developers and designers dedicated
+		to eliminating proprietary software.
 	</p>
-	<ul style="line-height:2">
-		{
-			people.map(({ href, name, country }) => (
-				<li>
-					<a {href}>{name}</a> {country}
-				</li>
-			))
-		}
+	<h2>Software</h2>
+	<h3>monofile</h3>
+	<p>File sharing over the Discord CDN</p>
+	<a href="https://github.com/mollersuite/monofile">Source</a>
+	<a href="https://fyle.uk">Flagship instance</a>
+	<h3>trollsmile</h3>
+	<p>User-install only Discord bot</p>
+	<a href="https://github.com/mollersuite/trollsmile">Source</a>
+	<a href="https://discord.com/oauth2/authorize?client_id=557323946656006145">Install</a>
+	<!-- <h3>Etcet</h3>
+	<p>The world's fastest bookmark manager<br />Available on Android and Linux</p>
+	<a href="https://f-droid.org/packages/uk.cetera.etcet/">F-Droid</a>
+	<a href="https://flathub.org/apps/details/uk.cetera.Etcet">Flathub</a>
+	<a href="https://github.com/mollersuite/etcet">Source</a>
+	<h3>Tangent</h3>
+	<p>
+		A <a href="https://www.w3.org/TR/ethical-web-principles/">user</a> agent.
+		<br />Dynamic Tabs, Super Block, and <a
+			href="https://github.com/mollersuite/tangent/tree/main/libarc">libarc</a
+		>.
+	</p>
+	<a href="https://tangent.surf">Website</a>
+	<a href="https://github.com/mollersuite/tangent">Source</a> -->
+	<h2>Philosophy</h2>
+	<p>Etceteran propaganda</p>
+	<ul>
+		<li>
+			<a href="https://www.gnu.org/philosophy/who-does-that-server-really-serve"
+				>Who Does That Server Really Serve</a
+			> Third-party servers are out of your control
+		</li>
+		<li>
+			<a href="https://www.gnu.org/philosophy/wwworst-app-store">WWWorst App Store</a>
+			Web apps are out of your control
+		</li>
+		<li>
+			<a href="https://ometer.com/preferences">Choosing our Preferences</a> If it needs a toggle,
+			then remove it
+		</li>
 	</ul>
+	<h2>Etceterans</h2>
+	<ul>
+		<li><a href="https://mau.monster">mau</a></li>
+		<li><a href="https://maliciousmeaning.dev">malice</a></li>
+		<li><a href="https://jack.cab">Jack</a> Founder, maintainer of everything else</li>
+		<li><a href="https://split.pet">split</a> Founder and maintainer of monofile</li>
+	</ul>
+	<img src={dither} alt="" />
 </Layout>
 
 <style>
-	article svg {
-		fill: currentColor;
-		vertical-align: middle;
+	img {
+		image-rendering: pixelated;
+		width: 100%;
+		padding-top: 30ch;
 	}
-	@media (min-width: 800px) {
-		div {
-			display: grid;
-			grid-template-columns: 1fr 1fr 1fr;
-			grid-gap: 1ch;
-		}
-		article {
-			background: #111;
-			border-radius: 1ch;
-		}
+	ul {
+		line-height: 2;
 	}
-	article {
-		position: relative;
-		&[inert] {
-			pointer-events: none;
-			@media (min-width: 800px) {
-				background: #090909;
-			}
-			a,
-			p {
-				opacity: 0.5;
-			}
-			&.discontinued::before {
-				content: "Discontinued";
-			}
-			&.discontinued {
-				background: #200;
-			}
-			&::before {
-				color: CanvasText;
-				content: "Coming soon";
-				position: absolute;
-				font-size: large;
-				z-index: 1;
-				font-weight: bold;
-				font-family: "Inter Display", Inter, sans-serif;
-				right: 0;
-				top: 0;
-				transform: rotate(5deg);
-			}
-		}
-		a {
-			padding: 1ch;
-			font-family: "Super Inter Display", "Inter Display", Inter, sans-serif;
-			display: block;
-		}
-		p {
-			padding-inline: 1ch;
-			padding-bottom: 1ch;
-			padding-top: 0;
-		}
-		h1 {
-			margin-block-start: 0;
-			font-size: large;
-		}
+	h1 {
+		font-size: 100px;
+		font-weight: 1000;
+		text-transform: uppercase;
+		margin-inline: auto;
+		max-width: max-content;
+		line-height: 0.9;
+	}
+	h2 {
+		border-image: conic-gradient(white 0 0) fill 0 //0 100vw;;
+		color: black;
+	}
+	p {
+		font-size: large;
 	}
 </style>
