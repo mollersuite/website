@@ -2,7 +2,7 @@
   "name": "etcetera-website-v2",
   "version": "0.0.1",
   "dependencies": {
-    "astro": "^4.8.6",
+    "astro": "^4.15.9",
     "subfont": "^7.2.1"
   },
   "scripts": {
